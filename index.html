@@ -1,744 +1,153 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ويب بلس | WebPlus - تصميم مواقع المحلات والأنشطة التجارية</title>
-    <!-- Tailwind CSS CDN -->
+    <title>ويب بلس | معرض النماذج والمواقع الإلكترونية التفاعلية</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Cairo -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f5ff',
-                            100: '#e0ebff',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                            purple: '#8b5cf6',
-                            accent: '#38bdf8',
-                        },
-                        darkBg: '#0f172a',
-                        cardBg: '#1e293b',
-                    },
-                    fontFamily: {
-                        cairo: ['Cairo', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #0b0f19;
-            color: #f8fafc;
-        }
-        
-        /* Glassmorphism Effects */
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .glass-nav {
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-b: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .hero-glow {
-            background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.25) 0%, rgba(139, 92, 246, 0.15) 35%, rgba(11, 15, 25, 0) 70%);
-        }
-
-        /* Animated Glowing Button */
-        .glow-btn {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .glow-btn:hover {
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
-            transform: translateY(-2px);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 4px;
-        }
+        body { font-family: 'Tajawal', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%); }
+        .gold-text { background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); }
+        .glass-nav { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); }
     </style>
 </head>
-<body class="bg-[#0b0f19] text-slate-100 flex flex-col min-h-screen relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
+<body class="pb-16">
 
-    <!-- Navigation Header -->
-    <header class="fixed top-0 right-0 left-0 z-50 glass-nav border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center space-x-3 space-x-reverse group">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 flex items-center justify-center text-white text-xl font-black shadow-lg shadow-blue-500/20 group-hover:scale-105 transition duration-300">
-                    <i class="fa-solid fa-code text-white"></i>
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-amber-500/20 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-amber-500/20">
+                    W
                 </div>
                 <div>
-                    <span class="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-blue-400">ويب بلس</span>
-                    <span class="text-[10px] text-blue-400 font-semibold block tracking-wider -mt-1">WEBPLUS AGENCY</span>
+                    <h1 class="text-lg font-bold gold-text leading-none">وكالة ويب بلس</h1>
+                    <span class="text-xs text-slate-400">WebPlus Interactive Demos</span>
                 </div>
-            </a>
-
-            <!-- Menu Links -->
-            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-semibold text-slate-300">
-                <a href="#demos" class="hover:text-blue-400 transition">النماذج الحية</a>
-                <a href="#features" class="hover:text-blue-400 transition">المميزات</a>
-                <a href="#how-it-works" class="hover:text-blue-400 transition">طريقة العمل</a>
-                <a href="#pricing" class="hover:text-blue-400 transition">الباقات</a>
-                <a href="#faq" class="hover:text-blue-400 transition">الأسئلة الشائعة</a>
-            </nav>
-
-            <!-- CTA Header Button -->
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <a href="https://wa.me/?text=مرحباً،%20أود%20الاستفسار%20عن%20تصميم%20موقع%20لمحلي" target="_blank" class="glow-btn bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm flex items-center shadow-lg">
-                    <i class="fa-brands fa-whatsapp text-lg ml-2"></i>
-                    <span>تواصل واتساب</span>
-                </a>
             </div>
+            <a href="https://wa.me/?text=مرحباً،%20أرغب%20في%20استفسار%20عن%20تصميم%20موقع%20إلكتروني" target="_blank" class="text-xs md:text-sm bg-amber-500/10 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full hover:bg-amber-500/20 transition flex items-center gap-1.5">
+                <i class="fa-brands fa-whatsapp text-green-400"></i> تواصل معنا
+            </a>
         </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-28 pb-10 px-4 text-center max-w-4xl mx-auto">
+        <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs md:text-sm font-medium mb-3">
+            ✨ معارض ومتاجر إلكترونية حية وتفاعلية
+        </span>
+        <h1 class="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
+            استعرض <span class="gold-text">نماذج المواقع الحقيقية</span> المخصصة لخدمة نشاطك التجاري
+        </h1>
+        <p class="text-slate-300 text-xs md:text-sm max-w-2xl mx-auto leading-relaxed">
+            اضغط على زر المعاينة لأي نموذج لتشاهد موقعاً كاملاً ومستقلاً يحتوي على نظام طلب وحجز تفاعلي مباشر عبر الواتساب.
+        </p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-36 pb-20 md:pt-48 md:pb-32 hero-glow overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            
-            <div class="inline-flex items-center space-x-2 space-x-reverse bg-blue-500/10 border border-blue-500/30 px-4 py-2 rounded-full mb-8 backdrop-blur-md">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
-                <span class="text-xs sm:text-sm font-bold text-blue-300">تصميم مواقع احترافية للمحلات والأنشطة التجارية</span>
+    <!-- Demo Models Grid -->
+    <main class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. صالون تجميل -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">صالون تجميل وسبا</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    موقع فاخر لعرض خدمات التجميل والبشرة والشعر، مع حجز مواعيد تفاعلي باختيار الوقت والخبيرة وتأكيد الطلب عبر الواتساب.
+                </p>
             </div>
-
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-white leading-tight tracking-tight mb-8">
-                نحول محلّك إلى <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400">وجهة رقمية</span> تجذب الزبائن وتزيد مبيعاتك
-            </h1>
-
-            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-10">
-                احصل على موقع ويب عصري متكامل لمحلّك (كافيه، مطعم، صالون، مخبز) يحتوي على منيو تفاعلي، حجز مواعيد، ربط واتساب مباشر، وربط خرائط جوجل، مع إمكانية التعديل بسهولة.
-            </p>
-
-            <!-- Call To Actions -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a href="#demos" class="w-full sm:w-auto glow-btn bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold px-8 py-4 rounded-xl shadow-xl flex items-center justify-center text-lg">
-                    <i class="fa-solid fa-laptop-code ml-2.5"></i> جرب النماذج الحية
-                </a>
-                <a href="#pricing" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-8 py-4 rounded-xl border border-slate-700 transition flex items-center justify-center text-lg">
-                    <i class="fa-solid fa-tags ml-2 text-blue-400"></i> استعرض الباقات
-                </a>
-            </div>
-
-            <!-- Trust Badge Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-20 pt-10 border-t border-slate-800/80">
-                <div class="p-4 rounded-xl glass-card">
-                    <span class="text-3xl font-black text-blue-400 block mb-1">+50</span>
-                    <span class="text-xs text-slate-400 font-semibold">موقع تم إنجازه</span>
-                </div>
-                <div class="p-4 rounded-xl glass-card">
-                    <span class="text-3xl font-black text-purple-400 block mb-1">48 ساعة</span>
-                    <span class="text-xs text-slate-400 font-semibold">سرعة تسليم العمل</span>
-                </div>
-                <div class="p-4 rounded-xl glass-card">
-                    <span class="text-3xl font-black text-emerald-400 block mb-1">100%</span>
-                    <span class="text-xs text-slate-400 font-semibold">متوافق مع الهواتف</span>
-                </div>
-                <div class="p-4 rounded-xl glass-card">
-                    <span class="text-3xl font-black text-amber-400 block mb-1">24/7</span>
-                    <span class="text-xs text-slate-400 font-semibold">دعم فني وتحديثات</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Demo Showcase Section -->
-    <section id="demos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="text-center mb-16">
-            <span class="text-blue-400 font-bold text-sm tracking-wider block mb-2">استعرض جودة أعمالنا</span>
-            <h2 class="text-3xl sm:text-5xl font-black text-white">نماذج تفاعلية جاهزة للأنشطة المختلفة</h2>
-            <p class="text-slate-400 text-base max-w-2xl mx-auto mt-4">اختر مجالك واضغط على "معاينة النموذج" لتجربة واجهة الموقع والطلب والمنيو تماماً كما سيراها زبائنك</p>
+            <a href="salon.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
 
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap justify-center gap-3 mb-12">
-            <button onclick="filterDemos('all')" class="demo-filter-btn active bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-lg">الكل</button>
-            <button onclick="filterDemos('cafe')" class="demo-filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-5 py-2.5 rounded-xl font-semibold text-sm transition">كافيهات ومقاهي</button>
-            <button onclick="filterDemos('salon')" class="demo-filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-5 py-2.5 rounded-xl font-semibold text-sm transition">صالونات تجميل</button>
-            <button onclick="filterDemos('bakery')" class="demo-filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-5 py-2.5 rounded-xl font-semibold text-sm transition">مخابز وحلويات</button>
-            <button onclick="filterDemos('restaurant')" class="demo-filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-5 py-2.5 rounded-xl font-semibold text-sm transition">مطاعم وجبات سريعة</button>
+        <!-- 2. كافيه ومقهى -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">كافيه ومقهى حديث</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    منيو إلكتروني تفاعلي يعرض المشروبات والمخبوزات مع سلة طلبات إلكترونية وحساب تلقائي للإجمالي وإرسال للطاولة أو الاستلام.
+                </p>
+            </div>
+            <a href="cafe.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
 
-        <!-- Demos Grid -->
-        <div id="demos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            
-            <!-- Demo Card 1: Cafe -->
-            <div class="demo-card glass-card rounded-3xl overflow-hidden border border-slate-700/60 hover:border-blue-500/50 transition duration-300 group flex flex-col justify-between" data-category="cafe">
-                <div>
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="كافيه" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                        <span class="absolute top-4 right-4 bg-amber-500/90 backdrop-blur-md text-stone-950 font-black text-xs px-3 py-1.5 rounded-full shadow">
-                            <i class="fa-solid fa-mug-hot ml-1"></i> كافيه ومقهى
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">موقع كافيه ومقهى عصري</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">يحتوي على منيو إلكتروني تفاعلي، خيارات المشروبات، سلة المشتريات، وإرسال الطلب مباشرة إلى واتساب الفرع.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">منيو تفاعلي</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">سلة طلبات</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">تحديد الفرع</span>
-                        </div>
-                    </div>
+        <!-- 3. مطعم برجر وووجبات -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-burger"></i>
                 </div>
-                <div class="p-6 pt-0 flex gap-3">
-                    <button onclick="openDemoModal('cafe')" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center text-sm">
-                        <i class="fa-solid fa-eye ml-2"></i> معاينة وتجربة النموذج
-                    </button>
-                </div>
+                <h3 class="text-xl font-bold text-white mb-2">مطعم ووجبات سريعة</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    قائمة طعام جذابة بالصور والأسعار، تتيح للعميل تخصيص الوجبات، إضافة الإضافات، والطلب المباشر للتوصيل أو الاستلام.
+                </p>
             </div>
-
-            <!-- Demo Card 2: Salon -->
-            <div class="demo-card glass-card rounded-3xl overflow-hidden border border-slate-700/60 hover:border-purple-500/50 transition duration-300 group flex flex-col justify-between" data-category="salon">
-                <div>
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop" alt="صالون" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                        <span class="absolute top-4 right-4 bg-purple-500/90 backdrop-blur-md text-white font-black text-xs px-3 py-1.5 rounded-full shadow">
-                            <i class="fa-solid fa-scissors ml-1"></i> صالون وحلاقة
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">موقع صالون تجميل وعناية</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">واجهة راقية لعرض الخدمات والأسعار مع نظام حجز مواعيد تفاعلي باختيار اليوم والوقت وإرسال التأكيد بالواتساب.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">حجز مواعيد</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">قائمة خدمات</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">معرض الصور</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 flex gap-3">
-                    <button onclick="openDemoModal('salon')" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center text-sm">
-                        <i class="fa-solid fa-eye ml-2"></i> معاينة وتجربة النموذج
-                    </button>
-                </div>
-            </div>
-
-            <!-- Demo Card 3: Bakery -->
-            <div class="demo-card glass-card rounded-3xl overflow-hidden border border-slate-700/60 hover:border-amber-500/50 transition duration-300 group flex flex-col justify-between" data-category="bakery">
-                <div>
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop" alt="مخبز" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                        <span class="absolute top-4 right-4 bg-amber-600 backdrop-blur-md text-white font-black text-xs px-3 py-1.5 rounded-full shadow">
-                            <i class="fa-solid fa-wheat-awn ml-1"></i> مخبز وحلويات
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">موقع مخبز "الرغيف الساخن"</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">تصميم دافئ يعرض المعجنات والخبز طازجاً، مع الخريطة المباشرة وشارة حالة العمل (مفتوح/مغلق).</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">طلب مباشر</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">خرائط جوجل</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">مواعيد العمل</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 flex gap-3">
-                    <button onclick="openDemoModal('bakery')" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center text-sm">
-                        <i class="fa-solid fa-eye ml-2"></i> معاينة وتجربة النموذج
-                    </button>
-                </div>
-            </div>
-
-            <!-- Demo Card 4: Restaurant -->
-            <div class="demo-card glass-card rounded-3xl overflow-hidden border border-slate-700/60 hover:border-emerald-500/50 transition duration-300 group flex flex-col justify-between" data-category="restaurant">
-                <div>
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="مطعم" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
-                        <span class="absolute top-4 right-4 bg-emerald-600 backdrop-blur-md text-white font-black text-xs px-3 py-1.5 rounded-full shadow">
-                            <i class="fa-solid fa-utensils ml-1"></i> مطعم وجبات
-                        </span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">موقع مطعم برجر ووجبات سريعة</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-4">عرض الوجبات والعروض اليومية مع تخصيص المكونات والإضافات وسلة التوصيل السريع.</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">قائمة الوجبات</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">تخصيص الوجبة</span>
-                            <span class="bg-slate-800 text-slate-300 text-xs font-medium px-2.5 py-1 rounded-md">طلب التوصيل</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 pt-0 flex gap-3">
-                    <button onclick="openDemoModal('restaurant')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center text-sm">
-                        <i class="fa-solid fa-eye ml-2"></i> معاينة وتجربة النموذج
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-slate-900/60 border-y border-slate-800 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-blue-400 font-bold text-sm tracking-wider block mb-2">لماذا يختارنا أصحاب المحلات؟</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white">مميزات تحول موقعك لأقوى أداة تسويق</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">طلبات واستفسارات على الواتساب</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">العميل يختار المنتجات أو يطلب الموعد، وتصلك الرسالة جاهزة ومفصلة على رقم واتساب المحل مباشرة.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">سرعة واستجابة 100% للهاتف</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">تصفح سلس جداً وسريع للغاية يمنح عميلك تجربة استثنائية كأنها تطبيق هاتف ذكي محترف.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">ربط مع خرائط جوجل وساعات العمل</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">توجيه مباشر لعنوان الفرع على الخريطة وتوضيح أوقات العمل وحالة المحل الحالية (مفتوح / مغلق).</p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-sliders"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">تحديث السعر والمنتجات بسهولة</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">إمكانية ربط المحتوى بجدول بسيط على جوالك لتغيير الأسعار وإضافة منتجات جديدة بلمسة واحدة.</p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">استضافة سريعة مجانية مدى الحياة</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">لا تكاليف استضافة شهرية معقدة! حماية وسرعة فائقة بدون أي رسوم مخفية.</p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="p-8 rounded-2xl glass-card hover:border-blue-500/40 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">تسليم في 48 ساعة ودعم متواصل</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">نجهز لك الموقع بالكامل وننشر رابطك الخاص بك على الإنترنت في يومين فقط مع دعم مستمر.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Steps -->
-    <section id="how-it-works" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-blue-400 font-bold text-sm tracking-wider block mb-2">خطوات بسيطة وسريعة</span>
-            <h2 class="text-3xl sm:text-4xl font-black text-white">كيف نعمل معاً لتشغيل موقعك؟</h2>
+            <a href="restaurant.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <!-- Step 1 -->
-            <div class="p-8 rounded-3xl glass-card border border-slate-800 text-center relative">
-                <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30">1</div>
-                <h3 class="text-xl font-bold text-white mb-3">اختيار النموذج والتفاصيل</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">تختار النموذج المناسب لنشاطك، وترسل لنا شعار المحل، ألوانك الفضلة، وقائمة المنتجات أو الخدمات والأسعار.</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="p-8 rounded-3xl glass-card border border-slate-800 text-center relative">
-                <div class="w-12 h-12 rounded-full bg-purple-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-500/30">2</div>
-                <h3 class="text-xl font-bold text-white mb-3">التصميم والتخصيص</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">نقوم ببرمجة وتنسيق الموقع، وربط أزرار الطلب برقم واتساب المحل، وإعداد رابط خرائط جوجل وساعات العمل.</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="p-8 rounded-3xl glass-card border border-slate-800 text-center relative">
-                <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">3</div>
-                <h3 class="text-xl font-bold text-white mb-3">النشر واستلام الموقع</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">نرفع موقعك على رابط حقيقي ودومين خاص بك لتستطيع إضافته على حسابات انستغرام وجوجل ماب وإرساله للزبائن!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-slate-900/40 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-blue-400 font-bold text-sm tracking-wider block mb-2">باقات اقتصادية ومناسبة</span>
-                <h2 class="text-3xl sm:text-5xl font-black text-white">اختر الباقة المناسبة لمحلّك</h2>
-                <p class="text-slate-400 text-base mt-3">استثمار بسيط مرة واحدة لتسويق احترافي يدوم دائماً</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                <!-- Basic Plan -->
-                <div class="p-8 rounded-3xl glass-card border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-200 mb-2">الباقة الأساسية</h3>
-                        <p class="text-xs text-slate-400 mb-6">مناسبة للمحلات التي تحتاج تواجد سريع ومعلومات تواصل</p>
-                        <div class="mb-8">
-                            <span class="text-4xl font-black text-white">499</span>
-                            <span class="text-sm font-bold text-slate-400">ريال / تدفع مرة واحدة</span>
-                        </div>
-                        <ul class="space-y-4 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 ml-3"></i> صفحة تعريفية واحدة بأعلى جودة</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 ml-3"></i> عرض الخدمات والمعلومات الرئيسية</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 ml-3"></i> زر اتصالات ورابط واتساب مباشر</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-400 ml-3"></i> ربط موقع المحل على خرائط جوجل</li>
-                            <li class="flex items-center text-slate-500"><i class="fa-solid fa-circle-xmark text-slate-600 ml-3"></i> منيو أو سلة طلبات تفاعلية</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/?text=مرحباً،%20أرغب%20في%20حجز%20الباقة%20الأساسية" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl transition text-center block">
-                        طلب الباقة الأساسية
-                    </a>
+        <!-- 4. مخبز وحلويات -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-cake-candles"></i>
                 </div>
-
-                <!-- Pro Plan (Featured) -->
-                <div class="p-8 rounded-3xl bg-gradient-to-b from-blue-900/60 to-slate-900 border-2 border-blue-500 shadow-2xl shadow-blue-500/20 relative flex flex-col justify-between transform lg:-translate-y-4">
-                    <span class="absolute -top-4 right-1/2 translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-lg">
-                        الأكثر طلباً ومبيعاً 🔥
-                    </span>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-2">الباقة الاحترافية</h3>
-                        <p class="text-xs text-blue-200 mb-6">الخيار المثالي للكافيهات والمطاعم والصالونات</p>
-                        <div class="mb-8">
-                            <span class="text-5xl font-black text-white">899</span>
-                            <span class="text-sm font-bold text-blue-300">ريال / تدفع مرة واحدة</span>
-                        </div>
-                        <ul class="space-y-4 text-sm text-slate-200 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-400 ml-3"></i> موقع متكامل بجميع الأقسام</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-400 ml-3"></i> منيو أو قائمة خدمات تفاعلية بالأقسام</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-400 ml-3"></i> نظام سلة شراء أو حجز مواعيد بالواتساب</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-400 ml-3"></i> ربط الموقع بخرائط جوجل وساعات العمل</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-blue-400 ml-3"></i> دومين خاص (.com) مجاناً لمدة سنة</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/?text=مرحباً،%20أرغب%20في%20حجز%20الباقة%20الاحترافية" target="_blank" class="w-full glow-btn bg-blue-600 hover:bg-blue-500 text-white font-extrabold py-4 rounded-xl transition text-center block shadow-lg">
-                        احجز الباقة الاحترافية الآن
-                    </a>
-                </div>
-
-                <!-- Complete Plan -->
-                <div class="p-8 rounded-3xl glass-card border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-200 mb-2">الباقة الشاملة</h3>
-                        <p class="text-xs text-slate-400 mb-6">لإدارة المحتوى بحرية وتعديل المنتجات بمرونة</p>
-                        <div class="mb-8">
-                            <span class="text-4xl font-black text-white">1399</span>
-                            <span class="text-sm font-bold text-slate-400">ريال / تدفع مرة واحدة</span>
-                        </div>
-                        <ul class="space-y-4 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-purple-400 ml-3"></i> كافة مميزات الباقة الاحترافية</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-purple-400 ml-3"></i> ربط مع لوحة تحكم سهلة للتعديل</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-purple-400 ml-3"></i> إمكانية إضافة وتعديل الأسعار والمنتجات</li>
-                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-purple-400 ml-3"></i> دعم فني وتحديثات لمدة سنة مجاناً</li>
-                        </ul>
-                    </div>
-                    <a href="https://wa.me/?text=مرحباً،%20أرغب%20في%20استفسار%20عن%20الباقة%20الشاملة" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl transition text-center block">
-                        طلب الباقة الشاملة
-                    </a>
-                </div>
+                <h3 class="text-xl font-bold text-white mb-2">مخبز وحلويات شرقية وغربية</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    عرض منتجات الكيك والمعجنات والحلويات، مع إمكانية إدخال الملاحظات الخاصة وحجز طلبات المناسبات فورياً.
+                </p>
             </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-black text-white mb-3">الأسئلة الشائعة</h2>
-            <p class="text-slate-400 text-sm">إليك إجابات لأهم الاستفسارات حول الخدمة</p>
+            <a href="bakery.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
 
-        <div class="space-y-4">
-            <div class="p-6 rounded-2xl glass-card">
-                <h4 class="font-bold text-lg text-white mb-2"><i class="fa-solid fa-circle-question text-blue-400 ml-2"></i> هل أحتاج لخبرة تقنية لإدارة الموقع؟</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">أبداً! نحن نجهز كل شيء بالكامل. وإذا أردت تعديل الأسعار مستقبلاً فنربط لك الموقع بجدول بسيط جداً في هاتفك لتعديل أي سعر بلمسة زر.</p>
-            </div>
-            <div class="p-6 rounded-2xl glass-card">
-                <h4 class="font-bold text-lg text-white mb-2"><i class="fa-solid fa-circle-question text-blue-400 ml-2"></i> كم يستغرق تسليم الموقع؟</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">يستغرق التسليم من 24 إلى 48 ساعة فقط بعد تزويدنا بالمعلومات الأساسية (الشعار، المنتجات، والأسعار).</p>
-            </div>
-            <div class="p-6 rounded-2xl glass-card">
-                <h4 class="font-bold text-lg text-white mb-2"><i class="fa-solid fa-circle-question text-blue-400 ml-2"></i> كيف تصلني الطلبات أو الحجوزات؟</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">تصلك رسالة مفصلة ومباشرة على رقم الواتساب الخاص بالفرع تحتوي على المنتجات أو الموعد واسم العميل مع الإجمالي.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Interactive Simulation Modal -->
-    <div id="demo-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 w-full max-w-4xl h-[85vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden relative">
-            <!-- Modal Header -->
-            <div class="p-4 bg-slate-800 border-b border-slate-700 flex items-center justify-between">
-                <div class="flex items-center space-x-3 space-x-reverse">
-                    <span id="modal-category-badge" class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">نموذج حي</span>
-                    <h3 id="modal-title" class="text-white font-bold text-lg">معاينة النموذج التفاعلي</h3>
+        <!-- 5. صالون حلاقة رجالي -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-user-ninja"></i>
                 </div>
-                <button onclick="closeDemoModal()" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-slate-600 text-slate-200 flex items-center justify-center transition">
-                    <i class="fa-solid fa-xmark text-lg"></i>
-                </button>
+                <h3 class="text-xl font-bold text-white mb-2">صالون وحلاقة رجالية VIP</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    نظام حجز مواعيد ومقاعد حلاقة للرجال يمنع الانتظار، اختيار الحلاق المفضل وخدمات العناية بالبشرة والذقن.
+                </p>
             </div>
-
-            <!-- Modal Interactive Device Frame -->
-            <div class="flex-1 bg-slate-950 p-4 sm:p-6 overflow-y-auto custom-scrollbar flex items-center justify-center">
-                <!-- Phone Prototype Container -->
-                <div class="w-full max-w-md bg-stone-900 border-4 border-slate-700 rounded-[3rem] p-3 shadow-2xl relative overflow-hidden my-auto">
-                    <!-- Dynamic Interactive Content Inside Phone -->
-                    <div id="modal-phone-content" class="bg-stone-950 text-white rounded-[2.2rem] overflow-hidden min-h-[550px] flex flex-col justify-between p-4">
-                        <!-- Loaded dynamically via JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Footer CTA -->
-            <div class="p-4 bg-slate-800 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <p class="text-slate-300 text-xs text-center sm:text-right">اعجبك هذا النموذج؟ أستطيع تنفيذه لمحلّك خلال 48 ساعة فقط!</p>
-                <a id="modal-order-btn" href="#" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-2.5 rounded-xl transition text-sm flex items-center justify-center">
-                    <i class="fa-brands fa-whatsapp text-lg ml-2"></i> طلب تصميم لـ محلّي
-                </a>
-            </div>
+            <a href="barber.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
-    </div>
 
-    <!-- Floating WhatsApp CTA -->
-    <a href="https://wa.me/?text=مرحباً،%20أود%20طلب%20موقع%20إلكتروني%20لمحلي" target="_blank" class="fixed bottom-6 left-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-emerald-500/50 hover:scale-110 transition duration-300">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">
-                    <i class="fa-solid fa-code text-xs"></i>
+        <!-- 6. متجر ملابس وأزياء -->
+        <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-amber-500/50 transition">
+            <div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-shirt"></i>
                 </div>
-                <span class="font-bold text-white">ويب بلس - WebPlus Agency</span>
+                <h3 class="text-xl font-bold text-white mb-2">متجر ملابس وأزياء</h3>
+                <p class="text-slate-300 text-xs md:text-sm mb-6 leading-relaxed">
+                    معرض منتجات أنيق يتيح تصفح تشكيلات الأزياء، اختيار المقاسات والألوان، وإرسال قائمة المشتريات للواتساب.
+                </p>
             </div>
-            <p>© 2026 جميع الحقوق محفوظة - خدمات تصميم المواقع الإلكترونية للمحلات</p>
-            <div class="flex space-x-4 space-x-reverse text-slate-400 text-lg">
-                <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" class="hover:text-blue-400"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
+            <a href="store.html" target="_blank" class="gold-gradient text-slate-950 font-bold text-center py-2.5 rounded-xl text-sm block hover:opacity-90 transition">
+                <i class="fa-solid fa-up-right-from-square ml-1"></i> معاينة الموقع الكامل
+            </a>
         </div>
-    </footer>
 
-    <script>
-        // Interactive Demos Filter Logic
-        function filterDemos(category) {
-            document.querySelectorAll('.demo-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg');
-                btn.classList.add('bg-slate-800', 'text-slate-300');
-            });
-            event.target.classList.remove('bg-slate-800', 'text-slate-300');
-            event.target.classList.add('bg-blue-600', 'text-white', 'shadow-lg');
+    </main>
 
-            const cards = document.querySelectorAll('.demo-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Demo Simulator Modal Content Data
-        const demoData = {
-            cafe: {
-                title: "نموذج كافيه ومقهى تفاعلي",
-                badge: "كافيه ومقهى",
-                orderText: "طلب تصميم موقع لكافيه",
-                html: `
-                    <div class="text-center pb-3 border-b border-stone-800">
-                        <span class="text-amber-400 text-xs font-bold block mb-1">قهوة وسعادة ☕</span>
-                        <h4 class="text-lg font-black text-white">كافيه أروما الشام</h4>
-                    </div>
-                    <div class="py-4 space-y-3">
-                        <p class="text-xs text-stone-400">اختر مشروبك المفضل للتجربة:</p>
-                        <div class="bg-stone-900 p-3 rounded-xl border border-stone-800 flex justify-between items-center">
-                            <div>
-                                <h5 class="text-xs font-bold text-white">سبانيش لاتيه بارد</h5>
-                                <span class="text-amber-400 font-bold text-xs">22 QAR</span>
-                            </div>
-                            <button onclick="addSimItem('سبانيش لاتيه', 22)" class="bg-amber-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold">+ إضافة</button>
-                        </div>
-                        <div class="bg-stone-900 p-3 rounded-xl border border-stone-800 flex justify-between items-center">
-                            <div>
-                                <h5 class="text-xs font-bold text-white">كيكة الشوكولاتة الداكنة</h5>
-                                <span class="text-amber-400 font-bold text-xs">28 QAR</span>
-                            </div>
-                            <button onclick="addSimItem('كيكة شوكولاتة', 28)" class="bg-amber-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold">+ إضافة</button>
-                        </div>
-                    </div>
-                    <div class="mt-auto pt-3 border-t border-stone-800">
-                        <div class="flex justify-between text-xs font-bold mb-3">
-                            <span>السلة: <span id="sim-cart-count">0</span> منتجات</span>
-                            <span class="text-amber-400" id="sim-cart-total">0 QAR</span>
-                        </div>
-                        <button onclick="sendSimWhatsApp('كافيه أروما')" class="w-full bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-xl shadow">إرسال الطلب بالواتساب 💬</button>
-                    </div>
-                `
-            },
-            salon: {
-                title: "نموذج حجز مواعيد لصالون تجميل",
-                badge: "صالون وعناية",
-                orderText: "طلب تصميم موقع لصالون",
-                html: `
-                    <div class="text-center pb-3 border-b border-stone-800">
-                        <span class="text-purple-400 text-xs font-bold block mb-1">عناية وأناقة ✨</span>
-                        <h4 class="text-lg font-black text-white">صالون الجمال الفاخر</h4>
-                    </div>
-                    <div class="py-4 space-y-3">
-                        <p class="text-xs text-stone-400">اختر الخدمة والموعد المناسب:</p>
-                        <select id="sim-salon-service" class="w-full bg-stone-900 border border-stone-800 text-xs p-2.5 rounded-xl text-white">
-                            <option>قص وتسريح شعر (150 QAR)</option>
-                            <option>جلسة عناية بالبشرة (250 QAR)</option>
-                            <option>مانيكير وباديكير (120 QAR)</option>
-                        </select>
-                        <input type="date" class="w-full bg-stone-900 border border-stone-800 text-xs p-2.5 rounded-xl text-white">
-                    </div>
-                    <div class="mt-auto pt-3 border-t border-stone-800">
-                        <button onclick="sendSimWhatsApp('صالون الجمال')" class="w-full bg-purple-600 text-white text-xs font-bold py-2.5 rounded-xl shadow">تأكيد حجز الموعد 📅</button>
-                    </div>
-                `
-            },
-            bakery: {
-                title: "نموذج مخبز وحلويات طازجة",
-                badge: "مخبز وحلويات",
-                orderText: "طلب تصميم موقع لمخبز",
-                html: `
-                    <div class="text-center pb-3 border-b border-stone-800">
-                        <span class="text-amber-500 text-xs font-bold block mb-1">طازج يومياً 🥖</span>
-                        <h4 class="text-lg font-black text-white">مخبز الرغيف الذهبي</h4>
-                    </div>
-                    <div class="py-4 space-y-3">
-                        <div class="bg-stone-900 p-3 rounded-xl border border-stone-800 flex justify-between items-center">
-                            <div>
-                                <h5 class="text-xs font-bold text-white">ربطة خبز عربي طازج</h5>
-                                <span class="text-amber-500 font-bold text-xs">5 QAR</span>
-                            </div>
-                            <button onclick="addSimItem('خبز عربي', 5)" class="bg-amber-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold">+ إضافة</button>
-                        </div>
-                        <div class="bg-stone-900 p-3 rounded-xl border border-stone-800 flex justify-between items-center">
-                            <div>
-                                <h5 class="text-xs font-bold text-white">كيلو بقلاوة مشكلة</h5>
-                                <span class="text-amber-500 font-bold text-xs">60 QAR</span>
-                            </div>
-                            <button onclick="addSimItem('بقلاوة مشكلة', 60)" class="bg-amber-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold">+ إضافة</button>
-                        </div>
-                    </div>
-                    <div class="mt-auto pt-3 border-t border-stone-800">
-                        <div class="flex justify-between text-xs font-bold mb-3">
-                            <span>السلة: <span id="sim-cart-count">0</span> منتجات</span>
-                            <span class="text-amber-500" id="sim-cart-total">0 QAR</span>
-                        </div>
-                        <button onclick="sendSimWhatsApp('مخبز الرغيف الذهبي')" class="w-full bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-xl shadow">طلب بالواتساب 💬</button>
-                    </div>
-                `
-            },
-            restaurant: {
-                title: "نموذج مطعم برجر ووجبات",
-                badge: "مطعم وجبات",
-                orderText: "طلب تصميم موقع لمطعم",
-                html: `
-                    <div class="text-center pb-3 border-b border-stone-800">
-                        <span class="text-emerald-400 text-xs font-bold block mb-1">أش think طعم 🍔</span>
-                        <h4 class="text-lg font-black text-white">مطعم البرجر الشهي</h4>
-                    </div>
-                    <div class="py-4 space-y-3">
-                        <div class="bg-stone-900 p-3 rounded-xl border border-stone-800 flex justify-between items-center">
-                            <div>
-                                <h5 class="text-xs font-bold text-white">وجبة دبل تشيز برجر</h5>
-                                <span class="text-emerald-400 font-bold text-xs">35 QAR</span>
-                            </div>
-                            <button onclick="addSimItem('وجبة دبل برجر', 35)" class="bg-emerald-600 text-white text-xs px-3 py-1.5 rounded-lg font-bold">+ إضافة</button>
-                        </div>
-                    </div>
-                    <div class="mt-auto pt-3 border-t border-stone-800">
-                        <div class="flex justify-between text-xs font-bold mb-3">
-                            <span>السلة: <span id="sim-cart-count">0</span> منتجات</span>
-                            <span class="text-emerald-400" id="sim-cart-total">0 QAR</span>
-                        </div>
-                        <button onclick="sendSimWhatsApp('مطعم البرجر')" class="w-full bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-xl shadow">إرسال الطلب والتوصيل 🛵</button>
-                    </div>
-                `
-            }
-        };
-
-        let simTotal = 0;
-        let simCount = 0;
-
-        function openDemoModal(type) {
-            const modal = document.getElementById('demo-modal');
-            const data = demoData[type];
-            simTotal = 0;
-            simCount = 0;
-
-            document.getElementById('modal-title').innerText = data.title;
-            document.getElementById('modal-category-badge').innerText = data.badge;
-            document.getElementById('modal-phone-content').innerHTML = data.html;
-            document.getElementById('modal-order-btn').href = `https://wa.me/?text=مرحباً،%20أرغب%20في%20${encodeURIComponent(data.orderText)}`;
-
-            modal.classList.remove('hidden');
-        }
-
-        function closeDemoModal() {
-            document.getElementById('demo-modal').classList.add('hidden');
-        }
-
-        function addSimItem(name, price) {
-            simCount++;
-            simTotal += price;
-            const countElem = document.getElementById('sim-cart-count');
-            const totalElem = document.getElementById('sim-cart-total');
-            if (countElem) countElem.innerText = simCount;
-            if (totalElem) totalElem.innerText = `${simTotal} QAR`;
-        }
-
-        function sendSimWhatsApp(shopName) {
-            alert(`هذا العرض لتجربة الفكرة! في الموقع الحقيقي سيتم فتح واتساب محادثة مع (${shopName}) وبها تفاصيل طلبك مباشرة.`);
-        }
-    </script>
 </body>
 </html>
