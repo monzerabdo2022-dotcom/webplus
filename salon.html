@@ -3,221 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صالون وسبا أورورا للتجميل | Aurora Beauty Salon</title>
+    <title>متجر فيرونا للأزياء | Verona Fashion Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .gold-gradient { background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%); }
-        .gold-text { background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(212, 175, 55, 0.2); }
-        .glass-nav { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); }
+        body { font-family: 'Tajawal', sans-serif; background-color: #0f0d13; color: #f8fafc; scroll-behavior: smooth; }
+        .pink-bg { background-color: #ec4899; }
+        .pink-text { color: #ec4899; }
+        .glass-nav { background: rgba(15, 13, 19, 0.95); backdrop-filter: blur(12px); }
+        .hero-bg { background: linear-gradient(rgba(15, 13, 19, 0.75), rgba(15, 13, 19, 0.95)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80') center/cover; }
     </style>
 </head>
 <body class="pb-24">
 
-    <!-- Header / Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-amber-500/20 px-4 py-3">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-pink-900/40 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-amber-500/20">
-                    A
+                <div class="w-10 h-10 rounded-full pink-bg flex items-center justify-center text-white font-extrabold text-xl">
+                    🛍️
                 </div>
-                <div>
-                    <h1 class="text-lg font-bold gold-text leading-none">صالون أورورا</h1>
-                    <span class="text-xs text-slate-400">Aurora Beauty & Spa</span>
-                </div>
+                <span class="text-xl font-bold tracking-wide text-white">VERONA <span class="pink-text">FASHION</span></span>
             </div>
-            <a href="#services" class="text-xs md:text-sm bg-amber-500/10 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full hover:bg-amber-500/20 transition">
-                <i class="fa-solid fa-sparkles ml-1"></i> احجزي موعدك
+
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-pink-400 transition">الرئيسية</a>
+                <a href="#about" class="hover:text-pink-400 transition">عن التشكيلة</a>
+                <a href="#products" class="hover:text-pink-400 transition">المنتجات والمعرض</a>
+                <a href="#gallery" class="hover:text-pink-400 transition">الأزياء</a>
+            </div>
+
+            <a href="#products" class="pink-bg text-white px-5 py-2 rounded-full font-bold text-xs md:text-sm hover:bg-pink-600 transition">
+                <i class="fa-solid fa-bag-shopping ml-1"></i> تسوق الآن
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-28 pb-12 px-4 relative overflow-hidden">
-        <div class="absolute -top-10 -right-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"></div>
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="inline-block px-4 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-sm font-medium mb-4">
-                ✨ تجربة رفاهية واستجمام متكاملة
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-24 px-4 text-center">
+        <div class="max-w-3xl">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 text-xs md:text-sm font-semibold mb-6">
+                ✨ تشكيلة الموسم الجديد 2026
             </span>
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-                تألقي بجمال ساحر في <span class="gold-text">صالون أورورا</span>
-            </h2>
-            <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
-                نقدم لكِ أرقى خدمات التجميل والعناية بالبشرة والشعر والأظافر على أيدي خبيرات متخصصات وبأفضل المنتجات العالمية.
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                تألقي بأرقى <span class="pink-text">الأزياء والتصميمات العصريّة</span>
+            </h1>
+            <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-8 max-w-2xl mx-auto">
+                اكتشفي تشكيلاتنا الحصرية المصممة بأعلى جودة وخامات تركية وأوروبية فاخرة تناسب كافة مناسباتك.
             </p>
-            <div class="flex justify-center gap-4 text-xs md:text-sm text-slate-300">
-                <div class="flex items-center gap-1.5 bg-slate-800/60 px-3 py-2 rounded-lg border border-slate-700">
-                    <i class="fa-solid fa-clock text-amber-400"></i> يومياً 10 ص - 10 م
-                </div>
-                <div class="flex items-center gap-1.5 bg-slate-800/60 px-3 py-2 rounded-lg border border-slate-700">
-                    <i class="fa-solid fa-location-dot text-amber-400"></i> الرياض - الملقا
-                </div>
-            </div>
+            <a href="#products" class="pink-bg text-white font-bold px-8 py-3.5 rounded-full text-sm hover:bg-pink-600 transition shadow-lg shadow-pink-500/20">
+                استعرضي التشكيلة الفاخرة
+            </a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="max-w-6xl mx-auto px-4 py-8">
-        <div class="flex items-center justify-between mb-6">
-            <div>
-                <h3 class="text-xl font-bold text-white">قائمة الخدمات والتجميل</h3>
-                <p class="text-xs text-slate-400">اختر الخدمة المطلوبة لإضافتها لسلة الحجز</p>
-            </div>
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="pink-text text-sm font-bold uppercase">المنتجات الأكثر مبيعاً</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">اختاري قطعك المفضلة وأضيفيها للسلة</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Service Item 1 -->
-            <div class="glass-card p-4 rounded-2xl flex justify-between items-center hover:border-amber-500/50 transition">
-                <div class="flex gap-3 items-center">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-scissors"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500/50 transition">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-white">فستان سهرة حرير راقي</h3>
+                        <span class="pink-text font-bold text-lg">350 ر.س</span>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-100 text-sm md:text-base">قص وتسريح الشعر الاحترافي</h4>
-                        <p class="text-xs text-slate-400">يشمل الغسيل مع السشوار والسيروم المغذي</p>
-                        <span class="text-xs text-amber-400 mt-1 inline-block"><i class="fa-regular fa-clock"></i> 45 دقيقة</span>
-                    </div>
-                </div>
-                <div class="text-left flex flex-col items-end gap-2">
-                    <span class="font-bold text-amber-300 text-base">150 ر.س</span>
-                    <button onclick="addService('قص وتسريح الشعر', 150)" class="gold-gradient text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 active:scale-95 transition">
-                        + حجز
+                    <p class="text-slate-400 text-xs mb-4">تصميم أنيق بقماش الحرير الناعم متوفر بالمقاسات (S, M, L).</p>
+                    <button onclick="addItem('فستان سهرة حرير', 350)" class="w-full pink-bg text-white font-bold py-2.5 rounded-xl text-xs hover:bg-pink-600 transition">
+                        + أضفي للمشتريات
                     </button>
                 </div>
             </div>
 
-            <!-- Service Item 2 -->
-            <div class="glass-card p-4 rounded-2xl flex justify-between items-center hover:border-amber-500/50 transition">
-                <div class="flex gap-3 items-center">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-sparkles"></i>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500/50 transition">
+                <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-white">طقم بلازر عصري أوف وايت</h3>
+                        <span class="pink-text font-bold text-lg">280 ر.س</span>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-100 text-sm md:text-base">جلسة تنظيف بشرة هيدرافيسال</h4>
-                        <p class="text-xs text-slate-400">تنظيف عميق، تقشير وترطيب وماسك النضارة</p>
-                        <span class="text-xs text-amber-400 mt-1 inline-block"><i class="fa-regular fa-clock"></i> 60 دقيقة</span>
-                    </div>
-                </div>
-                <div class="text-left flex flex-col items-end gap-2">
-                    <span class="font-bold text-amber-300 text-base">350 ر.س</span>
-                    <button onclick="addService('تنظيف بشرة هيدرافيسال', 350)" class="gold-gradient text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 active:scale-95 transition">
-                        + حجز
+                    <p class="text-slate-400 text-xs mb-4">شامل جاكيت وبنطال بقصة مستقيمة وقماش تركي فخم.</p>
+                    <button onclick="addItem('طقم بلازر عصري', 280)" class="w-full pink-bg text-white font-bold py-2.5 rounded-xl text-xs hover:bg-pink-600 transition">
+                        + أضفي للمشتريات
                     </button>
                 </div>
             </div>
 
-            <!-- Service Item 3 -->
-            <div class="glass-card p-4 rounded-2xl flex justify-between items-center hover:border-amber-500/50 transition">
-                <div class="flex gap-3 items-center">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-hand-sparkles"></i>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-pink-500/50 transition">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
+                <div class="p-5">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-bold text-lg text-white">عباية كاجوال ملونة</h3>
+                        <span class="pink-text font-bold text-lg">210 ر.س</span>
                     </div>
-                    <div>
-                        <h4 class="font-bold text-slate-100 text-sm md:text-base">بديكير ومنيكير الملكي</h4>
-                        <p class="text-xs text-slate-400">عناية باليدين والقدمين مع مساج الخزامى والطلاء</p>
-                        <span class="text-xs text-amber-400 mt-1 inline-block"><i class="fa-regular fa-clock"></i> 50 دقيقة</span>
-                    </div>
-                </div>
-                <div class="text-left flex flex-col items-end gap-2">
-                    <span class="font-bold text-amber-300 text-base">200 ر.س</span>
-                    <button onclick="addService('بديكير ومنيكير الملكي', 200)" class="gold-gradient text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 active:scale-95 transition">
-                        + حجز
-                    </button>
-                </div>
-            </div>
-
-            <!-- Service Item 4 -->
-            <div class="glass-card p-4 rounded-2xl flex justify-between items-center hover:border-amber-500/50 transition">
-                <div class="flex gap-3 items-center">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-slate-100 text-sm md:text-base">مكياج سهرة ناعم واحترافي</h4>
-                        <p class="text-xs text-slate-400">مكياج كامل متناسق مع ملامحك مع تركيب رموش</p>
-                        <span class="text-xs text-amber-400 mt-1 inline-block"><i class="fa-regular fa-clock"></i> 60 دقيقة</span>
-                    </div>
-                </div>
-                <div class="text-left flex flex-col items-end gap-2">
-                    <span class="font-bold text-amber-300 text-base">400 ر.س</span>
-                    <button onclick="addService('مكياج سهرة ناعم', 400)" class="gold-gradient text-slate-950 text-xs font-bold px-3 py-1.5 rounded-lg hover:opacity-90 active:scale-95 transition">
-                        + حجز
+                    <p class="text-slate-400 text-xs mb-4">عباية خفيفة وعصرية تناسب الإطلالات والطلعات اليومية.</p>
+                    <button onclick="addItem('عباية كاجوال ملونة', 210)" class="w-full pink-bg text-white font-bold py-2.5 rounded-xl text-xs hover:bg-pink-600 transition">
+                        + أضفي للمشتريات
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Booking Details Section -->
-    <section class="max-w-6xl mx-auto px-4 py-6">
-        <div class="glass-card p-6 rounded-2xl border border-amber-500/30">
-            <h3 class="text-lg font-bold text-amber-300 mb-4 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-check"></i> تفاصيل وتوقيت الحجز
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                <div>
-                    <label class="block text-xs text-slate-300 mb-1">تاريخ الحجز</label>
-                    <input type="date" id="book-date" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400">
-                </div>
-                <div>
-                    <label class="block text-xs text-slate-300 mb-1">الوقت المفضل</label>
-                    <select id="book-time" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400">
-                        <option>04:00 مساءً</option>
-                        <option>05:30 مساءً</option>
-                        <option>07:00 مساءً</option>
-                        <option>08:30 مساءً</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-xs text-slate-300 mb-1">اسم الخبيرة (اختياري)</label>
-                    <select id="book-stylist" class="w-full bg-slate-800 border border-slate-700 rounded-lg p-2.5 text-xs text-slate-100 focus:outline-none focus:border-amber-400">
-                        <option>أول خبيرة متاحة</option>
-                        <option>الخبيرة سارة (شعر)</option>
-                        <option>الخبيرة نورة (بشرة ومكياج)</option>
-                    </select>
-                </div>
-            </div>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 mb-8 text-center">
+            <span class="pink-text text-sm font-bold uppercase">المعرض</span>
+            <h2 class="text-2xl md:text-3xl font-bold mt-1">كتالوج إطلالات المتجر</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" class="w-full h-48 md:h-64 object-cover rounded-lg">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=500&q=80" class="w-full h-48 md:h-64 object-cover rounded-lg">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" class="w-full h-48 md:h-64 object-cover rounded-lg">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80" class="w-full h-48 md:h-64 object-cover rounded-lg">
         </div>
     </section>
 
     <!-- Floating Order Bar -->
-    <div class="fixed bottom-0 left-0 right-0 glass-nav border-t border-amber-500/30 p-4 z-50">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <div class="fixed bottom-0 left-0 right-0 glass-nav border-t border-pink-900/40 p-4 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div>
-                <span class="text-xs text-slate-400 block">الخدمات المختارة (<span id="cart-count">0</span>)</span>
-                <span class="text-lg font-bold gold-text" id="cart-total">0 ر.س</span>
+                <span class="text-xs text-slate-400 block">سلة الأزياء (<span id="cart-count">0</span>)</span>
+                <span class="text-xl font-bold pink-text" id="cart-total">0 ر.س</span>
             </div>
-            <button onclick="sendToWhatsApp()" class="gold-gradient text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95 transition flex items-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> تأكيد الحجز عبر الواتساب
+            <button onclick="sendToWhatsApp()" class="pink-bg text-white font-bold px-6 py-3 rounded-full text-xs md:text-sm hover:scale-105 transition flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> إرسال الطلب للمتجر
             </button>
         </div>
     </div>
 
     <script>
-        let selectedServices = [];
-        let totalAmount = 0;
-
-        function addService(name, price) {
-            selectedServices.push({ name, price });
-            totalAmount += price;
-            updateCartUI();
+        let cart = []; let total = 0;
+        function addItem(name, price) {
+            cart.push({ name, price }); total += price;
+            document.getElementById('cart-count').innerText = cart.length;
+            document.getElementById('cart-total').innerText = total + ' ر.س';
         }
-
-        function updateCartUI() {
-            document.getElementById('cart-count').innerText = selectedServices.length;
-            document.getElementById('cart-total').innerText = totalAmount + ' ر.س';
-        }
-
         function sendToWhatsApp() {
-            if (selectedServices.length === 0) {
-                alert('الرجاء اختيار خدمة واحدة على الأقل قبل تأكيد الحجز.');
-                return;
-            }
-
-            const date = document.getElementById('book-date').value || 'غير محدد';
-            const time = document.getElementById('book-time').value;
-            const stylist = document
+            if (cart.length === 0) return alert('اختر قطعة أولاً.');
+            let items = cart.map(i => `• ${i.name} (${i.price} ر.س)`).join('%0A');
+            let msg = `مرحباً Verona Fashion 👋%0Aأود طلب الأزياء التالية:%0A${items}%0A%0A*الإجمالي:* ${total} ر.س`;
+            window.open(`https://wa.me/?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
